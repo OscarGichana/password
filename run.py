@@ -47,6 +47,16 @@ def copy_password():
     '''
     return User.copy_password()
 
+def main():
+  '''
+  Main function
+  '''
+  print("Hello Welcome to your PASSWORD LOCKER. What is your name?")
+  user_name = input()
+
+  print(f"Hello {user_name}. what would you like to do?")
+  print('\n')
+
 
 if __name__ == '__main__':
 
