@@ -95,6 +95,22 @@ def main():
                   print(f"New User {u_name} {f_name} created")
                   print ('\n')
 
+          elif short_code == 'du':
+
+                  if display_users():
+                          print("Here is a list of all your users")
+                          print('\n')
+
+                          for user in display_users():
+                                  print(f"{user.first_name} {user.last_name} .....{user.phone_number}")
+
+                          print('\n')
+                  else:
+                          print('\n')
+                          print("You dont seem to have any user saved yet")
+                          print('\n')
+
+
 if __name__ == '__main__':
 
     main()
