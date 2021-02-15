@@ -1,4 +1,4 @@
-import pyperclip
+import sys, pyperclip
 
 class User:
     """
@@ -84,16 +84,10 @@ class User:
         return cls.user_list
 
 
-
-
-#copy paste email
-
-  #  @classmethod
-    #def copy_password(cls,username):
-     #   user_found = User.find_by_username(username)
-     #   pyperclip.copy(user_found.password)
-     #   User.copy_password()
-
+    @classmethod
+    def copy_password(cls,username):
+        user_found = User.find_by_username(username)
+        pyperclip.copy(user_found.password)
 
 
 class Credentials:
