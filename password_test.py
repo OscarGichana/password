@@ -111,8 +111,6 @@ class TestContact(unittest.TestCase):
         self.assertEqual(User.display_users(),User.user_list)
 
 
-
-
 class TestCredentials(unittest.TestCase):
 
     '''
