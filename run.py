@@ -57,6 +57,43 @@ def main():
   print(f"Hello {user_name}. what would you like to do?")
   print('\n')
 
+  while True:
+          print("Use these short codes : cu - create a new user, du - display user, fu -find a user, del -delete a user, ex -exit the password locker ")
+
+          short_code = input().lower()
+
+          if short_code == 'cu':
+                  print("New User")
+                  print("-"*10)
+
+                  print ("Which account would you like to create?")
+                  account = input()
+
+                  print ("First name ....")
+                  f_name = input()
+
+                  print("Last name ...")
+                  l_name = input()
+
+                  print("Username ...")
+                  u_name = input()
+
+
+                  print("Phone number ...")
+                  p_number = input()
+
+                  print("Email address ...")
+                  e_address = input()
+
+                  print("Password ...")
+                  p_word = input()
+
+
+
+                  save_users(create_user(account,f_name,l_name,u_name,p_number,e_address,p_word)) # create and save new user.
+                  print ('\n')
+                  print(f"New User {u_name} {f_name} created")
+                  print ('\n')
 
 if __name__ == '__main__':
 
