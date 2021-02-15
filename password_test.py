@@ -130,5 +130,24 @@ class TestContact(unittest.TestCase):
     #    Contact.copy_email("username")
 
   #      self.assertEqual(self.new_contact.email,pyperclip.paste())
+class TestCredentials(unittest.TestCase):
+
+    '''
+    Test class that defines test cases for the credentiasls class behaviours.
+
+    Args:
+        unittest.TestCase: TestCase class that helps in creating test cases
+    '''
+
+    def setUp(self):
+        self.new_credentials =Credentials ("123","username")
+
+    def test_init(self):
+        self.assertEqual(self.new_credentials.password,"123")
+        self.assertEqual(self.new_credentials.username,"username")
+
+
+
+
 if __name__ == '__main__':
     unittest.main()
