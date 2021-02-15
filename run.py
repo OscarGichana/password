@@ -110,6 +110,24 @@ def main():
                           print("You dont seem to have any user saved yet")
                           print('\n')
 
+          elif short_code == 'fu':
+
+                  print("Enter the username you want to search for")
+
+                  search_account = input()
+                  if check_existing_users(search_account):
+                          search_user = find_user(search_account)
+                          print(f"{search_user.first_name} {search_user.last_name}")
+                          print('-' * 20)
+
+                          print(f"Phone number.......{search_user.phone_number}")
+                          print(f"Email address.......{search_user.email}")
+                  else:
+                          print("That contact does not exist")
+
+
+
+
 
 if __name__ == '__main__':
 
