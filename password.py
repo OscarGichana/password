@@ -40,3 +40,39 @@ class User:
         User.user_list.remove(self)
 
 
+  #find by number
+    @classmethod
+    def find_by_username(cls,username):
+        '''
+        Method that takes in account name and returns an account that matches that account name.
+
+        Args:
+            account: Username to search for
+        Returns :
+            Account of person that matches the username.
+        '''
+
+        for user in cls.user_list:
+            if user.username == username:
+                return user
+
+
+
+    # user exists?not
+    @classmethod
+    def user_exist(cls,username):
+        '''
+        Method that checks if a user exists from the user list.
+        Args:
+            username: account to search if it exists
+        Returns :
+            Boolean: True or false depending if the user exists
+        '''
+        for user in cls.user_list:
+            if user.username == username:
+                    return True
+
+        return False
+
+
+
