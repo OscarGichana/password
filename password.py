@@ -75,4 +75,29 @@ class User:
         return False
 
 
+        #display all contacts
+    @classmethod
+    def display_users(cls):
+        '''
+        method that returns the user list
+        '''
+        return cls.user_list
+
+
+
+
+#copy paste email
+
+  #  @classmethod
+    #def copy_password(cls,username):
+     #   user_found = User.find_by_username(username)
+     #   pyperclip.copy(user_found.password)
+     #   User.copy_password()
+
+
+
+
+
+
+
 
