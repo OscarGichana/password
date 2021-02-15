@@ -127,6 +127,18 @@ def main():
 
 
 
+          elif short_code == 'del':
+                  print("Enter the username you want to delete")
+
+                  search_account = input()
+                  if check_existing_users(search_account):
+                    search_user = find_user(search_account)
+                    del_user(search_user)
+                    print("user deleted")
+                  else:
+                          print("not found")
+
+
 
 
 if __name__ == '__main__':
